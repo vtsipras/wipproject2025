@@ -1,1 +1,43 @@
-a
+<!DOCTYPE html>
+<html lang="el">
+<head>
+  <meta charset="UTF-8">
+  <title>My Eshop - Αρχική</title>
+  <link rel="stylesheet" href="style.css">
+  <script>
+    let slideIndex = 0;
+    function showSlides() {
+      let slides = document.querySelectorAll(".slideshow img");
+      slides.forEach(slide => slide.classList.remove("active"));
+      slideIndex = (slideIndex + 1) % slides.length;
+      slides[slideIndex].classList.add("active");
+      setTimeout(showSlides, 3000);
+    }
+    window.onload = showSlides;
+  </script>
+</head>
+<body>
+  <header>
+    <h1>My Eshop</h1>
+    <nav>
+      <a href="homepage.html">Αρχική</a>
+      <a href="products.html">Προϊόντα</a>
+    </nav>
+  </header>
+
+  <div class="slideshow">
+    <img src="images/slide1.jpg" alt="Slide 1" class="active">
+    <img src="images/slide2.jpg" alt="Slide 2">
+    <img src="images/slide3.jpg" alt="Slide 3">
+  </div>
+
+  <main style="padding: 20px; text-align: center;">
+    <h2>Καλώς ήρθατε στο ηλεκτρονικό μας κατάστημα!</h2>
+    <p>Ανακαλύψτε τις τελευταίες τάσεις και μοναδικά προϊόντα για όλους.</p>
+  </main>
+
+  <footer>
+    Ομάδα: Μαρία Παπαδοπούλου, Γιάννης Κωνσταντίνου, Νίκος Δημητρίου
+  </footer>
+</body>
+</html>
