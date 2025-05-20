@@ -130,3 +130,16 @@
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
   object-fit: cover;      /* crop if needed to fill box */
 }
+
+.video-container {
+  max-width: 600px; /* same width as image layout for alignment */
+  margin: 20px auto;
+  text-align: center; /* center the iframe */
+  }
+  
+  .video-container iframe {
+  width: 100%; /* full width of container */
+  height: 340px; /* fixed height or adjust as you want */
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  }
