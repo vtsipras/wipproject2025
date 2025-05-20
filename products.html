@@ -10,7 +10,10 @@
       margin: 0;
       padding: 0;
     }
-
+    .logo img {
+  height: 150px;
+  width: auto;
+  }
     header {
       background-color: #4B0082; 
       color: white;
@@ -99,12 +102,14 @@
 </head>
 <body>
   <header>
-    <h1>TechHub</h1>
+    <div class="logo">
+    <img src="images/logo2.png" alt="TechHub Logo" />
+    </div>
     <nav>
-      <a href="homepage.html">Αρχική</a>
-      <a href="products.html">Προϊόντα</a>
+    <a href="homepage.html">Αρχική</a>
+    <a href="products.html">Προϊόντα</a>
     </nav>
-  </header>
+    </header>
 
   <div class="search-bar">
     <input type="text" placeholder="Αναζήτηση προϊόντος...">
