@@ -6,15 +6,27 @@
   <link rel="stylesheet" href="style.css">
   <script>
     let slideIndex = 0;
+  
     function showSlides() {
-      let slides = document.querySelectorAll(".slideshow img");
+      const slides = document.querySelectorAll(".slideshow img");
+  
       slides.forEach(slide => slide.classList.remove("active"));
+      
       slideIndex = (slideIndex + 1) % slides.length;
+  
       slides[slideIndex].classList.add("active");
+  
       setTimeout(showSlides, 3000);
     }
-    window.onload = showSlides;
+  
+    window.onload = function () {
+      // Make sure slideshow starts at index 0
+      const slides = document.querySelectorAll(".slideshow img");
+      if (slides.length > 0) slides[0].classList.add("active");
+      showSlides();
+    };
   </script>
+  
 </head>
 <body>
   <header>
