@@ -1,0 +1,123 @@
+[
+    {
+      "name": "Smartwatch",
+      "image": "images/product1.jpg",
+      "description": "Έξυπνο ρολόι με πολλές λειτουργίες και μοντέρνο σχεδιασμό.",
+      "likes": 0
+    },
+    {
+      "name": "Ακουστικά Bluetooth",
+      "image": "images/product2.jpg",
+      "description": "Υψηλής ποιότητας ασύρματα ακουστικά για καθαρό ήχο.",
+      "likes": 0
+    },
+    {
+      "name": "Power Bank",
+      "image": "images/product3.jpg",
+      "description": "Φορητός φορτιστής για όλες τις συσκευές σας.",
+      "likes": 0
+    },
+    {
+      "name": "Laptop 15\"",
+      "image": "images/product4.jpg",
+      "description": "Ελαφρύ και γρήγορο laptop ιδανικό για εργασία και ψυχαγωγία.",
+      "likes": 0
+    },
+    {
+      "name": "Drone με Κάμερα",
+      "image": "images/product5.jpg",
+      "description": "Drone υψηλής ανάλυσης για εντυπωσιακές εναέριες λήψεις.",
+      "likes": 0
+    },
+    {
+      "name": "Bluetooth Ηχείο",
+      "image": "images/product6.jpg",
+      "description": "Φορητό ηχείο με δυνατό ήχο και μεγάλη αυτονομία.",
+      "likes": 0
+    },
+    {
+      "name": "Gaming Ποντίκι",
+      "image": "images/product7.jpg",
+      "description": "Εργονομικό ποντίκι με υψηλή ακρίβεια και ρυθμιζόμενο DPI για τους gamers.",
+      "likes": 0
+    },
+    {
+      "name": "Τηλεόραση 4K",
+      "image": "images/product8.jpg",
+      "description": "Τηλεόραση με ανάλυση 4K και έξυπνες λειτουργίες για κορυφαία εμπειρία θέασης.",
+      "likes": 0
+    },
+    {
+      "name": "Κάμερα Ασφαλείας WiFi",
+      "image": "images/product9.jpg",
+      "description": "Ασύρματη κάμερα με ανίχνευση κίνησης και νυχτερινή όραση.",
+      "likes": 0
+    },
+    {
+      "name": "Ηλεκτρικό Σίδερο",
+      "image": "images/product10.jpg",
+      "description": "Ισχυρό σίδερο με ρυθμιζόμενη θερμοκρασία για άψογο σιδέρωμα.",
+      "likes": 0
+    },
+    {
+      "name": "Tablet",
+      "image": "images/product11.jpg",
+      "description": "Ελαφρύ και γρήγορο tablet για δουλειά και ψυχαγωγία.",
+      "likes": 0
+    },
+    {
+      "name": "Ρομποτική Σκούπα",
+      "image": "images/product12.jpg",
+      "description": "Αυτόματη σκούπα με προγραμματισμό και αισθητήρες αποφυγής εμποδίων.",
+      "likes": 0
+    },
+    {
+      "name": "Gaming Πληκτρολόγιο",
+      "image": "images/product13.jpg",
+      "description": "Μηχανικό πληκτρολόγιο με φωτιζόμενα πλήκτρα για κορυφαία εμπειρία gaming.",
+      "likes": 0
+    },
+    {
+      "name": "Εξωτερικός Σκληρός Δίσκος",
+      "image": "images/product14.jpg",
+      "description": "Φορητός δίσκος 1TB ιδανικός για backup και αποθήκευση αρχείων.",
+      "likes": 0
+    },
+    {
+      "name": "Smart TV Remote",
+      "image": "images/product15.jpg",
+      "description": "Εύχρηστο τηλεχειριστήριο με υποστήριξη φωνητικών εντολών για όλες τις Smart TVs.",
+      "likes": 0
+    },
+    {
+      "name": "Κονσόλα Παιχνιδιών",
+      "image": "images/product16.jpg",
+      "description": "Πανίσχυρη κονσόλα για gaming νέας γενιάς με 4K υποστήριξη.",
+      "likes": 0
+    },
+    {
+      "name": "Φορτιστής Αυτοκινήτου",
+      "image": "images/product17.jpg",
+      "description": "Διπλή θύρα USB για ταυτόχρονη φόρτιση δύο συσκευών στο αυτοκίνητο.",
+      "likes": 0
+    },
+    {
+      "name": "USB Stick",
+      "image": "images/product18.jpg",
+      "description": "Στικάκι 64GB για εύκολη και γρήγορη μεταφορά αρχείων παντού.",
+      "likes": 0
+    },
+    {
+      "name": "Φωτογραφική Μηχανή",
+      "image": "images/product19.jpg",
+      "description": "Ψηφιακή κάμερα υψηλής ανάλυσης για επαγγελματικές φωτογραφίες.",
+      "likes": 0
+    },
+    {
+      "name": "Ακουστικά",
+      "image": "images/product20.jpg",
+      "description": "Άνετα, ελαφριά και με καθαρό ήχο – ιδανικά για μουσική και κλήσεις.",
+      "likes": 0
+    }
+  ]
+  

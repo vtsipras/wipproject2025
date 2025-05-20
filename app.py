@@ -8,7 +8,7 @@ app = Flask(__name__)
 CORS(app)
 
 # Βάλε εδώ το connection string από το MongoDB Atlas (άλλαξε user, pass, dbname)
-app.config["MONGO_URI"] = "mongodb+srv://euangelostsipras:02m5AxYB3IJef0vq@cluster0.npy0hl1.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
+app.config["MONGO_URI"] = "mongodb+srv://euangelostsipras:02m5AxYB3IJef0vq@Cluster0.mongodb.net/eshop?retryWrites=true&w=majority"
 
 mongo = PyMongo(app)
 products_col = mongo.db.products
