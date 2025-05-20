@@ -1,11 +1,9 @@
-/* General Reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   }
   
-  /* Body Styling */
   body {
   font-family: Arial, sans-serif;
   background-color: #f8f8f8;
@@ -13,9 +11,8 @@
   line-height: 1.6;
   }
   
-  /* Header */
   header {
-  background-color: #4B0082; /* dark purple */
+  background-color: #4B0082; 
   color: white;
   padding: 20px;
   text-align: center;
@@ -37,12 +34,11 @@
   text-decoration: underline;
   }
   
-  /* Slideshow */
   .slideshow {
   position: relative;
-  max-width: 1000px; /* or your preferred width */
+  max-width: 1000px; 
   width: 100%;
-  height: 500px; /* fixed height for all slides */
+  height: 500px; 
   margin: 30px auto;
   overflow: hidden;
   border-radius: 10px;
@@ -52,8 +48,8 @@
   .slideshow img {
   width: 100%;
   height: 100%;
-  object-fit: contain; /* show full image, keep aspect ratio */
-  background-color: #f8f8f8; /* optional: background color for empty spaces */
+  object-fit: contain; 
+  background-color: #f8f8f8; 
   display: none;
   position: absolute;
   top: 0;
@@ -70,8 +66,7 @@
   }
   
   
-  
-  /* Main Section */
+
   main {
   max-width: 1000px;
   margin: 30px auto;
@@ -92,7 +87,6 @@
   color: #333;
   }
   
-  /* Footer */
   footer {
   text-align: center;
   padding: 15px;
@@ -115,30 +109,30 @@
   color: #4B0082;
   }
   .image-row {
-  max-width: 1000px; /* same max width as slideshow */
-  margin: 20px auto; /* center horizontally with some vertical spacing */
+  max-width: 1000px; 
+  margin: 20px auto;
   display: flex;
-  justify-content: space-between; /* space out images evenly */
-  gap: 15px; /* optional spacing between images */
+  justify-content: space-between; 
+  gap: 15px; 
   }
   
   .image-row img {
-  width: 32%; /* three images in one row with some gap */
-  height: auto; /* keep image proportions */
-  border-radius: 8px; /* optional styling */
+  width: 32%; 
+  height: auto;
+  border-radius: 8px; 
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  object-fit: cover; /* crop if needed to fill box */
+  object-fit: cover;
   }
   
   .video-container {
-  max-width: 600px; /* same width as image layout for alignment */
+  max-width: 600px; 
   margin: 20px auto;
-  text-align: center; /* center the iframe */
+  text-align: center; 
   }
   
   .video-container iframe {
-  width: 100%; /* full width of container */
-  height: 340px; /* fixed height or adjust as you want */
+  width: 100%;
+  height: 340px; 
   border-radius: 8px;
   box-shadow: 0 2px 10px rgba(0,0,0,0.1);
   }
