@@ -12,9 +12,9 @@
       line-height: 1.6;
     }
     .logo img {
-  height: 150px;
-  width: auto;
-  }
+      height: 150px;
+      width: auto;
+    }
     header {
       background-color: #4B0082; 
       color: white;
@@ -48,47 +48,26 @@
       outline: none;
     }
 
-    .products-container {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 20px;
-      padding: 40px;
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-
-    .product {
+    #resultsTable {
+      width: 80%;
+      margin: 20px auto;
+      border-collapse: collapse;
       background-color: white;
-      border: 2px solid #800080; 
-      border-radius: 10px;
-      padding: 15px;
-      width: 200px;
+    }
+
+    #resultsTable th, #resultsTable td {
+      border: 1px solid #800080;
+      padding: 10px;
       text-align: center;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-      transition: transform 0.2s ease;
     }
 
-    .product:hover {
-      transform: scale(1.05);
+    #resultsTable th {
+      background-color: #4B0082;
+      color: white;
     }
 
-    .product img {
-      width: 150px;
-      height: auto;
+    #resultsTable img {
       border-radius: 5px;
-      margin-bottom: 10px;
-    }
-
-    .product h3 {
-      color: #4B0082; 
-      margin-bottom: 5px;
-      font-size: 18px;
-    }
-
-    .product p {
-      font-size: 14px;
-      color: #333;
     }
 
     footer {
@@ -104,139 +83,45 @@
 <body>
   <header>
     <div class="logo">
-    <img src="images/logo2.png" alt="TechHub Logo" />
+      <img src="images/logo2.png" alt="TechHub Logo" />
     </div>
     <nav>
-    <a href="homepage.html">Αρχική</a>
-    <a href="products.html">Προϊόντα</a>
+      <a href="homepage.html">Αρχική</a>
+      <a href="products.html">Προϊόντα</a>
     </nav>
-    </header>
+  </header>
 
   <div class="search-bar">
-    <input type="text" placeholder="Αναζήτηση προϊόντος...">
+    <input id="searchInput" type="text" placeholder="Αναζήτηση προϊόντος...">
+    <button id="searchBtn">Αναζήτηση</button>
   </div>
 
-  <section class="products-container">
-    <div class="product">
-      <img src="images/product1.jpg" alt="Προϊόν 1">
-      <h3>Smartwatch</h3>
-      <p>Έξυπνο ρολόι με πολλές λειτουργίες και μοντέρνο σχεδιασμό.</p>
-    </div>
-    <div class="product">
-      <img src="images/product2.jpg" alt="Προϊόν 2">
-      <h3>Ακουστικά Bluetooth</h3>
-      <p>Υψηλής ποιότητας ασύρματα ακουστικά για καθαρό ήχο.</p>
-    </div>
-    <div class="product">
-      <img src="images/product3.jpg" alt="Προϊόν 3">
-      <h3>Power Bank</h3>
-      <p>Φορητός φορτιστής για όλες τις συσκευές σας.</p>
-    </div>
-    <div class="product">
-      <img src="images/product4.jpg" alt="Laptop">
-      <h3>Laptop 15"</h3>
-      <p>Ελαφρύ και γρήγορο laptop ιδανικό για εργασία και ψυχαγωγία.</p>
-    </div>
-    <div class="product">
-      <img src="images/product5.jpg" alt="Drone">
-      <h3>Drone με Κάμερα</h3>
-      <p>Drone υψηλής ανάλυσης για εντυπωσιακές εναέριες λήψεις.</p>
-    </div>
-    <div class="product">
-      <img src="images/product6.jpg" alt="Bluetooth Ηχείο">
-      <h3>Bluetooth Ηχείο</h3>
-      <p>Φορητό ηχείο με δυνατό ήχο και μεγάλη αυτονομία.</p>
-    </div>
-    <div class="product">
-      <img src="images/product7.jpg" alt="Gaming Ποντίκι">
-      <h3>Gaming Ποντίκι</h3>
-      <p>Εργονομικό ποντίκι με υψηλή ακρίβεια και ρυθμιζόμενο DPI για τους gamers.</p>
-    </div>
-    <div class="product">
-      <img src="images/product8.jpg" alt="Τηλεόραση 4K">
-      <h3>Τηλεόραση 4K</h3>
-      <p>Τηλεόραση με ανάλυση 4K και έξυπνες λειτουργίες για κορυφαία εμπειρία θέασης.</p>
-    </div>
-    <div class="product">
-      <img src="images/product9.jpg" alt="Κάμερα Ασφαλείας WiFi">
-      <h3>Κάμερα Ασφαλείας WiFi</h3>
-      <p>Ασύρματη κάμερα με ανίχνευση κίνησης και νυχτερινή όραση.</p>
-    </div>
-      <div class="product">
-    <img src="images/product10.jpg" alt="Ηλεκτρικό Σίδερο">
-    <h3>Ηλεκτρικό Σίδερο</h3>
-    <p>Ισχυρό σίδερο με ρυθμιζόμενη θερμοκρασία για άψογο σιδέρωμα.</p>
-  </div>
-  <div class="product">
-    <img src="images/product11.jpg" alt="Tablet">
-    <h3>Tablet</h3>
-    <p>Ελαφρύ και γρήγορο tablet για δουλειά και ψυχαγωγία.</p>
-  </div>
-  <div class="product">
-    <img src="images/product12.jpg" alt="Ρομποτική Σκούπα">
-    <h3>Ρομποτική Σκούπα</h3>
-    <p>Αυτόματη σκούπα με προγραμματισμό και αισθητήρες αποφυγής εμποδίων.</p>
-  </div>
-    <div class="product">
-    <img src="images/product13.jpg" alt="Gaming Πληκτρολόγιο">
-    <h3>Gaming Πληκτρολόγιο</h3>
-    <p>Μηχανικό πληκτρολόγιο με φωτιζόμενα πλήκτρα για κορυφαία εμπειρία gaming.</p>
-  </div>
-
-  <div class="product">
-    <img src="images/product14.jpg" alt="Εξωτερικός Σκληρός Δίσκος">
-    <h3>Εξωτερικός Σκληρός Δίσκος</h3>
-    <p>Φορητός δίσκος 1TB ιδανικός για backup και αποθήκευση αρχείων.</p>
-  </div>
-
-  <div class="product">
-    <img src="images/product15.jpg" alt="Smart TV Remote">
-    <h3>Smart TV Remote</h3>
-    <p>Εύχρηστο τηλεχειριστήριο με υποστήριξη φωνητικών εντολών για όλες τις Smart TVs.</p>
-  </div>
-
-  <div class="product">
-    <img src="images/product16.jpg" alt="Κονσόλα Παιχνιδιών">
-    <h3>Κονσόλα Παιχνιδιών</h3>
-    <p>Πανίσχυρη κονσόλα για gaming νέας γενιάς με 4K υποστήριξη.</p>
-  </div>
-
-  <div class="product">
-    <img src="images/product17.jpg" alt="Φορτιστής Αυτοκινήτου">
-    <h3>Φορτιστής Αυτοκινήτου</h3>
-    <p>Διπλή θύρα USB για ταυτόχρονη φόρτιση δύο συσκευών στο αυτοκίνητο.</p>
-  </div>
-
-  <div class="product">
-    <img src="images/product18.jpg" alt="USB Stick">
-    <h3>USB Stick</h3>
-    <p>Στικάκι 64GB για εύκολη και γρήγορη μεταφορά αρχείων παντού.</p>
-  </div>
-
-  <div class="product">
-    <img src="images/product19.jpg" alt="Φωτογραφική Μηχανή">
-    <h3>Φωτογραφική Μηχανή</h3>
-    <p>Ψηφιακή κάμερα υψηλής ανάλυσης για επαγγελματικές φωτογραφίες.</p>
-  </div>
-
-  <div class="product">
-    <img src="images/product20.jpg" alt="Ακουστικά Κεφαλής">
-    <h3>Ακουστικά</h3>
-    <p>Άνετα, ελαφριά και με καθαρό ήχο – ιδανικά για μουσική και κλήσεις.</p>
-  </div>
-  </section>
+  <table id="resultsTable">
+    <thead>
+      <tr>
+        <th>Όνομα</th>
+        <th>Εικόνα</th>
+        <th>Περιγραφή</th>
+        <th>Likes</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- Εδώ θα εμφανίζονται τα αποτελέσματα -->
+    </tbody>
+  </table>
 
   <footer>
-  <div style="max-width: 1200px; margin: 0 auto; padding: 20px; text-align: center; color: #555;">
-    <p>© 2025 My Eshop. Όλα τα δικαιώματα κατοχυρωμένα.</p>
-    <p>Η ομάδα μας: Ευάγγελος Τσίπρας, Ναταλία Ταγγίλη, Χριστίνα Φραγγοπούλου</p>
-    <p>Εδώ θα βρείτε τα καλύτερα προϊόντα τεχνολογίας, με ποιότητα και αξιόπιστη εξυπηρέτηση.</p>
-    <p>
-      📞 <a href="tel:+302100000000" style="color: #4B0082; text-decoration: none;">+30 210 000 0000</a> |
-      📧 <a href="mailto:info@myeshop.gr" style="color: #4B0082; text-decoration: none;">info@techhub.gr</a>
-    </p>
-  </div>
-</footer>
+    <div style="max-width: 1200px; margin: 0 auto; padding: 20px; text-align: center; color: #555;">
+      <p>© 2025 My Eshop. Όλα τα δικαιώματα κατοχυρωμένα.</p>
+      <p>Η ομάδα μας: Ευάγγελος Τσίπρας, Ναταλία Ταγγίλη, Χριστίνα Φραγγοπούλου</p>
+      <p>Εδώ θα βρείτε τα καλύτερα προϊόντα τεχνολογίας, με ποιότητα και αξιόπιστη εξυπηρέτηση.</p>
+      <p>
+        📞 <a href="tel:+302100000000" style="color: #4B0082; text-decoration: none;">+30 210 000 0000</a> |
+        📧 <a href="mailto:info@myeshop.gr" style="color: #4B0082; text-decoration: none;">info@techhub.gr</a>
+      </p>
+    </div>
+  </footer>
 
+  <script src="products.js"></script>
 </body>
 </html>

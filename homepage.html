@@ -1,79 +1,170 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="el">
 <head>
-<meta charset="UTF-8">
-<title>TechHub - Αρχική</title>
-<link rel="stylesheet" href="style.css">
-<script>
-let slideIndex = 0;
+  <meta charset="UTF-8">
+  <title>TechHub - Αρχική</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .slideshow {
+      width: 100%;
+      max-width: 600px;
+      height: 340px;
+      margin: 20px auto;
+      position: relative;
+      overflow: hidden;
+    }
 
-function showSlides() {
-const slides = document.querySelectorAll(".slideshow img");
+    .slideshow img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: none;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
 
-slides.forEach(slide => slide.classList.remove("active"));
+    .slideshow img.active {
+      display: block;
+    }
 
-slideIndex = (slideIndex + 1) % slides.length;
+    .image-row {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin: 20px auto;
+      flex-wrap: wrap;
+    }
 
-slides[slideIndex].classList.add("active");
+    .image-row img {
+      width: 200px;
+      height: auto;
+      border-radius: 10px;
+    }
 
-setTimeout(showSlides, 3000);
-}
+    .video-container {
+      display: flex;
+      justify-content: center;
+      margin: 30px 0;
+    }
 
-window.onload = function () {
-const slides = document.querySelectorAll(".slideshow img");
-if (slides.length > 0) slides[0].classList.add("active");
-showSlides();
-};
-</script>
+    header {
+      background-color: #4B0082;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
 
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    .logo img {
+      height: 150px;
+      width: auto;
+    }
+
+    footer {
+      text-align: center;
+      padding: 15px;
+      font-size: 14px;
+      color: #666;
+      background-color: #eee;
+      margin-top: 40px;
+    }
+  </style>
+
+  <script>
+    let slideIndex = 0;
+
+    function showSlides() {
+      const slides = document.querySelectorAll(".slideshow img");
+      slides.forEach(slide => slide.classList.remove("active"));
+
+      slideIndex = (slideIndex + 1) % slides.length;
+      slides[slideIndex].classList.add("active");
+
+      setTimeout(showSlides, 3000);
+    }
+
+    window.onload = async function () {
+      const slideshowDiv = document.querySelector(".slideshow");
+
+      try {
+        const res = await fetch('/popular-products');
+        const data = await res.json(); // [{ image: "images/product1.jpg", name: "Smartwatch" }, ...]
+
+        data.forEach((product, index) => {
+          const img = document.createElement("img");
+          img.src = product.image;
+          img.alt = product.name;
+          if (index === 0) img.classList.add("active");
+          slideshowDiv.appendChild(img);
+        });
+
+        if (data.length > 0) showSlides();
+
+      } catch (error) {
+        console.error("Αποτυχία φόρτωσης δημοφιλών προϊόντων:", error);
+      }
+    };
+  </script>
 </head>
+
 <body>
-<header>
-<div class="logo">
-<img src="images/logo2.png" alt="TechHub Logo" />
-</div>
-<nav>
-<a href="homepage.html">Αρχική</a>
-<a href="products.html">Προϊόντα</a>
-</nav>
-</header>
+  <header>
+    <div class="logo">
+      <img src="images/logo2.png" alt="TechHub Logo" />
+    </div>
+    <nav>
+      <a href="homepage.html">Αρχική</a>
+      <a href="products.html">Προϊόντα</a>
+    </nav>
+  </header>
 
-<main style="padding: 20px; text-align: center;">
-<h2>Καλώς ήρθατε στο ηλεκτρονικό μας κατάστημα!</h2>
-<p>Ανακαλύψτε τις τελευταίες τάσεις και μοναδικά προϊόντα τεχνολογίας.</p>
-</main>
+  <main style="padding: 20px; text-align: center;">
+    <h2>Καλώς ήρθατε στο ηλεκτρονικό μας κατάστημα!</h2>
+    <p>Ανακαλύψτε τις τελευταίες τάσεις και μοναδικά προϊόντα τεχνολογίας.</p>
+  </main>
 
-<div class="slideshow"></div>
+<div id="slideshow" style="max-width: 600px; margin: 30px auto; position: relative;"></div>
 
-<div class="image-row">
-<img src="images/homepage1.jpg" alt="Product 6">
-<img src="images/homepage2.jpg" alt="Product 7">
-<img src="images/homepage3.jpg" alt="Product 8">
-</div>
+  <div class="image-row">
+    <img src="images/homepage1.jpg" alt="Product 6">
+    <img src="images/homepage2.jpg" alt="Product 7">
+    <img src="images/homepage3.jpg" alt="Product 8">
+  </div>
 
-<div class="video-container">
-<iframe
-width="600"
-height="340"
-src="https://www.youtube.com/embed/WwjHonzRd4E"
-title="YouTube video player"
-frameborder="0"
-allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-allowfullscreen>
-</iframe>
-</div>
+  <div class="video-container">
+    <iframe
+      width="600"
+      height="340"
+      src="https://www.youtube.com/embed/WwjHonzRd4E"
+      title="YouTube video player"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen>
+    </iframe>
+  </div>
 
-<footer>
-<div style="max-width: 1200px; margin: 0 auto; padding: 20px; text-align: center; color: #555;">
-<p>© 2025 My Eshop. Όλα τα δικαιώματα κατοχυρωμένα.</p>
-<p>Η ομάδα μας: Ευάγγελος Τσίπρας, Ναταλία Ταγγίλη, Χριστίνα Φραγγοπούλου</p>
-<p>Εδώ θα βρείτε τα καλύτερα προϊόντα τεχνολογίας, με ποιότητα και αξιόπιστη εξυπηρέτηση.</p>
-<p>
-📞 <a href="tel:+302100000000" style="color: #4B0082; text-decoration: none;">+30 210 000 0000</a> |
-📧 <a href="mailto:info@myeshop.gr" style="color: #4B0082; text-decoration: none;">info@techub.gr</a>
-</p>
-</div>
-</footer>
-<script src="products.js"></script>
+  <footer>
+    <div style="max-width: 1200px; margin: 0 auto; padding: 20px; text-align: center; color: #555;">
+      <p>© 2025 My Eshop. Όλα τα δικαιώματα κατοχυρωμένα.</p>
+      <p>Η ομάδα μας: Ευάγγελος Τσίπρας, Ναταλία Ταγγίλη, Χριστίνα Φραγγοπούλου</p>
+      <p>Εδώ θα βρείτε τα καλύτερα προϊόντα τεχνολογίας, με ποιότητα και αξιόπιστη εξυπηρέτηση.</p>
+      <p>
+        📞 <a href="tel:+302100000000" style="color: #4B0082; text-decoration: none;">+30 210 000 0000</a> |
+        📧 <a href="mailto:info@techhub.gr" style="color: #4B0082; text-decoration: none;">info@techhub.gr</a>
+      </p>
+    </div>
+  </footer>
+  <script src="homepage.js"></script>
 </body>
 </html>
